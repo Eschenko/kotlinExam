@@ -141,7 +141,7 @@ class User private constructor(
     }
 
     companion object Factory {
-        val usedUser = mutableListOf<String>()
+       // val usedUser = mutableListOf<String>()
         fun makeUser(
             fullName: String,
             email: String? = null,
@@ -150,10 +150,10 @@ class User private constructor(
         ): User {
             val (firstName, lastName)= fullName.fullNameToPair()
 
-            if (usedUser.contains(firstName)){
-                throw IllegalArgumentException("This user is already logged")
-            }
-            usedUser.add(firstName)
+//            if (usedUser.contains(firstName)){
+//                throw IllegalArgumentException("This user is already logged")
+//            }
+            //usedUser.add(firstName)
             return when {
                 !phone.isNullOrBlank() -> User(firstName, lastName, phone)
                 !email.isNullOrBlank() && !password.isNullOrBlank() -> User(
