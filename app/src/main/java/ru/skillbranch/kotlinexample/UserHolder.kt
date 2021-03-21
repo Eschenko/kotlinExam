@@ -24,6 +24,14 @@ object UserHolder {
         map.clear()
     }
 
+    fun registerUserByPhone(s: String, s1: String): User {
+    return User.makeUser(s,s1)
+    }
+
+    fun requestAccessCode(s: String) {
+
+    }
+
 //    fun registerUserByPhone(fullName: String, rawPhone: String): User {
 //
 //        val accessCode :String? = null
